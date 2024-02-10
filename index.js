@@ -7,23 +7,29 @@ FizzBuzz
 */
 
 document.getElementById("mybtn").onclick = function fizzBuzz(){
-    let i = document.getElementById("txtbox").value;    
+    let i = document.getElementById("txtbox").value; 
+    i = Number(i);   
 
-    if(i % 3 == 0 && i % 5 == 0){
-        document.getElementById("labeltxt").innerHTML = "FizzBuzz";
-        document.body.style.backgroundColor = "#FFFF00";
-    }
-    else if(i % 3 == 0){
-        document.getElementById("labeltxt").innerHTML = "Fizz";
-        document.body.style.backgroundColor = "#00FFFF";
-    }
-    else if(i % 5 == 0){
-        document.getElementById("labeltxt").innerHTML = "Buzz";
-        document.body.style.backgroundColor = "#FF0000";
-    }
-    else{
-        document.getElementById("labeltxt").innerHTML = i;
-    }
+        if(isNaN(i)){
+            document.getElementById("labeltxt").innerHTML = "That is not a number";
+        }
+        else{
+            if(i % 3 == 0 && i % 5 == 0){
+                document.getElementById("labeltxt").innerHTML = "FizzBuzz";
+                document.body.style.backgroundColor = "#FFFF00";
+            }
+            else if(i % 3 == 0){
+                document.getElementById("labeltxt").innerHTML = "Fizz";
+                document.body.style.backgroundColor = "#00FFFF";
+            }
+            else if(i % 5 == 0){
+                document.getElementById("labeltxt").innerHTML = "Buzz";
+                document.body.style.backgroundColor = "#FF0000";
+            }
+            else{
+                document.getElementById("labeltxt").innerHTML = i;
+            }
+        }
 }
     
 
