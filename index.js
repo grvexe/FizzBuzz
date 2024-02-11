@@ -9,26 +9,45 @@ FizzBuzz
 document.getElementById("mybtn").onclick = function fizzBuzz(){
     let i = document.getElementById("txtbox").value; 
     i = Number(i);   
+    let labeltxt = document.getElementById("labeltxt");
+    let txtbox = document.getElementById("txtbox");
+    let mybtn = document.getElementById("mybtn");
 
     if(i == 0){
         document.getElementById("labeltxt").innerHTML = "Can't divide 0";
     }
     else{
         if(isNaN(i) || i == ""){
-            document.getElementById("labeltxt").innerHTML = "That is not a number";
+            document.getElementById("labeltxt").innerHTML = "Not a number!";
         }
         else{
             if(i % 3 == 0 && i % 5 == 0){
-                document.getElementById("labeltxt").innerHTML = "FizzBuzz";
-                document.body.style.backgroundColor = "#FFFF00";
+                document.getElementById("labeltxt").innerHTML = "Fizz Buzz";
+                document.body.style.backgroundColor = "#e9ff92";
+                labeltxt.style.color = "#031403";
+                txtbox.style.border = "solid 2px #031403";
+                txtbox.style.color = "#031403";
+                mybtn.style.backgroundColor = "#031403";
+                mybtn.style.color = "#e9ff92";
+
             }
             else if(i % 3 == 0){
                 document.getElementById("labeltxt").innerHTML = "Fizz";
-                document.body.style.backgroundColor = "#00FFFF";
+                document.body.style.backgroundColor = "#e9ff92";
+                labeltxt.style.color = "#031403";
+                txtbox.style.border = "solid 2px #031403";
+                txtbox.style.color = "#031403";
+                mybtn.style.backgroundColor = "#031403";
+                mybtn.style.color = "#e9ff92";
             }
             else if(i % 5 == 0){
                 document.getElementById("labeltxt").innerHTML = "Buzz";
-                document.body.style.backgroundColor = "#FF0000";
+                document.body.style.backgroundColor = "#e9ff92";
+                labeltxt.style.color = "#031403";
+                txtbox.style.border = "solid 2px #031403";
+                txtbox.style.color = "#031403";
+                mybtn.style.backgroundColor = "#031403";
+                mybtn.style.color = "#e9ff92";
             }
             else{
                 document.getElementById("labeltxt").innerHTML = i;
