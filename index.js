@@ -10,7 +10,7 @@ document.getElementById("mybtn").onclick = function fizzBuzz(){
     let i = document.getElementById("txtbox").value; 
     i = Number(i);   
 
-        if(isNaN(i)){
+        if(isNaN(i) || i == ""){
             document.getElementById("labeltxt").innerHTML = "That is not a number";
         }
         else{
