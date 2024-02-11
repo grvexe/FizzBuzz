@@ -1,3 +1,6 @@
+body {
+    background-color: #031403;
+}
 .container {
     position: absolute;
     top: 50%;
@@ -6,6 +9,7 @@
     width: 500px;
     height: 400px;
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
 .input{
@@ -20,13 +24,9 @@
 #labeltxt {
     font-size: 40px;
     font-weight: bold;
-    
-}
-
-#labeltxt label {
-    text-align: center;
     width: 312px;
-
+    color: #E9ff92;
+    
 }
 
 #txtbox {
@@ -34,7 +34,10 @@
     width: 312px;
     height: 25px;
     border-radius: 5px;
-    border: solid 2px black;
+    border: solid 2px #E9ff92;
+    background: transparent;
+    color: #E9ff92;
+    padding-left: 5px;
 }
 
 #mybtn {
@@ -43,6 +46,11 @@
     height: 30.2px;
     border-radius: 5px;
     border: solid 2px black;
-    background-color: none;
+    background-color: #E9ff92;
+    font-family:'Open Sans', sans-serif;;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
