@@ -10,6 +10,10 @@ document.getElementById("mybtn").onclick = function fizzBuzz(){
     let i = document.getElementById("txtbox").value; 
     i = Number(i);   
 
+    if(i == 0){
+        document.getElementById("labeltxt").innerHTML = "Can't divide 0";
+    }
+    else{
         if(isNaN(i) || i == ""){
             document.getElementById("labeltxt").innerHTML = "That is not a number";
         }
@@ -30,6 +34,8 @@ document.getElementById("mybtn").onclick = function fizzBuzz(){
                 document.getElementById("labeltxt").innerHTML = i;
             }
         }
+    }
+        
 }
     
 
