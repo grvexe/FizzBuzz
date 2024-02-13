@@ -1,101 +1,73 @@
 /*
 FizzBuzz
-• print numbers from 1 to 100
 • if number is divisible by 3 then print Fizz
 • if number is divisible by 5 then print Buzz
 • if number is divisible by both 3 and 5 then print FizzBuzz
 */
 
+// Declaring DOM elements as variables to be used in functions
+
+let labeltxt = document.getElementById("labeltxt");
+let txtbox = document.getElementById("txtbox");
+let mybtn = document.getElementById("mybtn");
+
+// Function to reset color of the page to original state
+
+function resetState(){
+    document.body.style.backgroundColor = "#031403";
+    labeltxt.style.color = "#e9ff92";
+    txtbox.style.border = "solid 2px #e9ff92";
+    txtbox.style.color = "#e9ff92";
+    mybtn.style.backgroundColor = "#e9ff92";
+    mybtn.style.color = "#031403";
+    labeltxt.textContent = "Enter a number";
+}
+
+// Function to change color of the page is FizzBuzz message is displayed
+
+function changeState(){
+    document.body.style.backgroundColor = "#e9ff92";
+    labeltxt.style.color = "#031403";
+    txtbox.style.border = "solid 2px #031403";
+    txtbox.style.color = "#031403";
+    mybtn.style.backgroundColor = "#031403";
+    mybtn.style.color = "#e9ff92";
+}
+
+// Calling the resetState() function when the textbox is clicked on
+
+txtbox.addEventListener('focus', resetState);
+
+// If else code to manipulate elements on DOM and display Fizz Buzz message
+
 document.getElementById("mybtn").onclick = function fizzBuzz(){
     let i = document.getElementById("txtbox").value; 
     i = Number(i);   
-    let labeltxt = document.getElementById("labeltxt");
-    let txtbox = document.getElementById("txtbox");
-    let mybtn = document.getElementById("mybtn");
-
     if(i == 0){
-        document.getElementById("labeltxt").innerHTML = "Can't divide 0";
+        labeltxt.textContent = "Can't divide 0";
     }
     else{
         if(isNaN(i) || i == ""){
-            document.getElementById("labeltxt").innerHTML = "Not a number!";
+            labeltxt.textContent = "Not a number!";
         }
         else{
             if(i % 3 == 0 && i % 5 == 0){
-                document.getElementById("labeltxt").innerHTML = "Fizz Buzz";
-                document.body.style.backgroundColor = "#e9ff92";
-                labeltxt.style.color = "#031403";
-                txtbox.style.border = "solid 2px #031403";
-                txtbox.style.color = "#031403";
-                mybtn.style.backgroundColor = "#031403";
-                mybtn.style.color = "#e9ff92";
+                labeltxt.textContent = "Fizz Buzz";
+                changeState();
 
             }
             else if(i % 3 == 0){
-                document.getElementById("labeltxt").innerHTML = "Fizz";
-                document.body.style.backgroundColor = "#e9ff92";
-                labeltxt.style.color = "#031403";
-                txtbox.style.border = "solid 2px #031403";
-                txtbox.style.color = "#031403";
-                mybtn.style.backgroundColor = "#031403";
-                mybtn.style.color = "#e9ff92";
+                labeltxt.textContent = "Fizz";
+                changeState();
             }
             else if(i % 5 == 0){
-                document.getElementById("labeltxt").innerHTML = "Buzz";
-                document.body.style.backgroundColor = "#e9ff92";
-                labeltxt.style.color = "#031403";
-                txtbox.style.border = "solid 2px #031403";
-                txtbox.style.color = "#031403";
-                mybtn.style.backgroundColor = "#031403";
-                mybtn.style.color = "#e9ff92";
+                labeltxt.textContent = "Buzz";
+                changeState();
             }
             else{
-                document.getElementById("labeltxt").innerHTML = i;
+                labeltxt.textContent = i;
             }
         }
     }
         
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Code for FizzBuzz from 1 to 100 in console
-for(let i = 1; i <= 100; i++){
-    if(i % 3 == 0 && i % 5 == 0){
-        console.log(`${i} FizzBuzz`);
-    }
-    else if(i % 3 == 0){
-        console.log(`${i} Fizz`);
-    }
-    else if(i % 5 == 0){
-        console.log(`${i} Buzz`);
-    }
-    else{
-        console.log(i);
-    }
-}
-*/
