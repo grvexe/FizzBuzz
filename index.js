@@ -41,13 +41,16 @@ txtbox.addEventListener('focus', resetState);
 // If else code to manipulate elements on DOM and display Fizz Buzz message
 
 document.getElementById("mybtn").onclick = function fizzBuzz(){
-    let i = document.getElementById("txtbox").value; 
-    i = Number(i);   
-    if(i == 0){
-        labeltxt.textContent = "Can't divide 0";
+    let i = txtbox.value;   
+ 
+    if(i == ""){
+        labeltxt.textContent = "Empty field";
+    }
+    else if (i == 0){
+        labeltxt.textContent = "Can't divide by 0";
     }
     else{
-        if(isNaN(i) || i == ""){
+        if(isNaN(i)){
             labeltxt.textContent = "Not a number!";
         }
         else{
