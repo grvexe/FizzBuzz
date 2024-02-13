@@ -23,7 +23,7 @@ function resetState(){
     labeltxt.textContent = "Enter a number";
 }
 
-// Function to change color of the page is FizzBuzz message is displayed
+// Function to change color of the page if FizzBuzz message is displayed
 
 function changeState(){
     document.body.style.backgroundColor = "#e9ff92";
